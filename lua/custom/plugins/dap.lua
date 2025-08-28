@@ -4,12 +4,22 @@ return {
   {
     'mfussenegger/nvim-dap',
     dependencies = {
-      'leoluz/nvim-dap-go',
+      {
+        'leoluz/nvim-dap-go',
+        keys = {
+          {
+            '<leader>dt',
+            function()
+              require('dap-go').debug_test()
+            end,
+          },
+        },
+      },
       {
         'rcarriga/nvim-dap-ui',
         keys = {
           {
-            '<leader>dt',
+            '<leader>td',
             function()
               require('dapui').toggle()
             end,
@@ -18,7 +28,6 @@ return {
       },
       'mfussenegger/nvim-dap-python',
       'theHamsta/nvim-dap-virtual-text',
-      'nvim-neotest/nvim-nio',
       'williamboman/mason.nvim',
     },
     config = function()
@@ -76,6 +85,14 @@ return {
       local dap_python = require 'dap-python'
       dap_python.setup('~/.local/pipx/venvs/debugpy/bin/python', { include_configs = false })
     end,
+    keys = {
+      {
+        '<leader>dt',
+        function()
+          require('dap-python').test_method()
+        end,
+      },
+    },
   },
   {
     'nvim-telescope/telescope-dap.nvim',
