@@ -2,27 +2,6 @@
 --  I promise not to create any merge conflicts in this directory :)
 --
 -- See the kickstart.nvim README for more information
-vim.keymap.set('n', '<leader>tt', vim.cmd.ToggleTerm, { desc = '[T]oggle[T]erm' })
-vim.keymap.set('n', '<leader>tn1', '<Cmd>1ToggleTerm<CR>', { desc = 'ToggleTerm 1' })
-vim.keymap.set('n', '<leader>tn2', '<Cmd>2ToggleTerm<CR>', { desc = 'ToggleTerm 2' })
-vim.keymap.set('n', '<leader>tn3', '<Cmd>3ToggleTerm<CR>', { desc = 'ToggleTerm 3' })
-vim.keymap.set('n', '<leader>tn4', '<Cmd>4ToggleTerm<CR>', { desc = 'ToggleTerm 3' })
-vim.keymap.set('n', '<leader>tn5', '<Cmd>5ToggleTerm<CR>', { desc = 'ToggleTerm 3' })
-vim.keymap.set('n', '<leader>tn6', '<Cmd>6ToggleTerm<CR>', { desc = 'ToggleTerm 3' })
-vim.keymap.set('n', '<leader>tn7', '<Cmd>7ToggleTerm<CR>', { desc = 'ToggleTerm 3' })
-vim.keymap.set('n', '<leader>tn8', '<Cmd>8ToggleTerm<CR>', { desc = 'ToggleTerm 3' })
-vim.keymap.set('n', '<leader>tn9', '<Cmd>9ToggleTerm<CR>', { desc = 'ToggleTerm 3' })
-vim.keymap.set('n', '<leader>tn0', '<Cmd>0ToggleTerm<CR>', { desc = 'ToggleTerm 3' })
-vim.keymap.set('n', '<leader>tg', '<Cmd>9TermExec cmd="lazygit" direction="float"<CR>', { desc = '[T]oggleTerm [g]it' })
-
-vim.keymap.set('n', '<C-d>', '<C-d>zz')
-vim.keymap.set('n', '<C-u>', '<C-u>zz')
-
-vim.keymap.set('n', '<leader>ca', function()
-  require('tiny-code-action').code_action()
-end, { noremap = true, silent = true, desc = '[c]ode [a]ction' })
-
-vim.keymap.set('n', '<leader>tm', '<Cmd>MarkdownPreview<CR>', { desc = 'Open MarkdownPreview' })
 
 vim.api.nvim_create_user_command('Jq', function()
   vim.cmd "%!jq '.'"
@@ -84,15 +63,6 @@ return {
       ]]
     end,
   },
-  -- {
-  --   'iamcco/markdown-preview.nvim',
-  --   cmd = { 'MarkdownPreviewToggle', 'MarkdownPreview', 'MarkdownPreviewStop' },
-  --   build = 'cd app && yarn install',
-  --   init = function()
-  --     vim.g.mkdp_filetypes = { 'markdown' }
-  --   end,
-  --   ft = { 'markdown' },
-  -- },
   { 'rebelot/kanagawa.nvim' },
   { 'catppuccin/nvim', name = 'catppuccin', priority = 1000 },
   {
@@ -104,7 +74,7 @@ return {
     end,
   },
   { 'ellisonleao/gruvbox.nvim', priority = 1000, config = true, opts = ... },
-  { 'sainnhe/gruvbox-material', priority = 1000, config = true, opts = ... },
+  { 'sainnhe/gruvbox-material', priority = 1000, config = true, opts = ... }, -- favorite
   {
     'nvim-lualine/lualine.nvim',
     config = function()
@@ -169,5 +139,9 @@ return {
       { '<leader>n', '<cmd>Grapple cycle_tags next<cr>', desc = 'Grapple cycle next tag' },
       { '<leader>p', '<cmd>Grapple cycle_tags prev<cr>', desc = 'Grapple cycle previous tag' },
     },
+  },
+  {
+    'folke/zen-mode.nvim',
+    opts = {},
   },
 }

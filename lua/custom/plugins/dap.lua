@@ -12,19 +12,12 @@ return {
             function()
               require('dap-go').debug_test()
             end,
+            desc = '[D]ebug Go [T]est',
           },
         },
       },
       {
         'rcarriga/nvim-dap-ui',
-        keys = {
-          {
-            '<leader>td',
-            function()
-              require('dapui').toggle()
-            end,
-          },
-        },
       },
       'mfussenegger/nvim-dap-python',
       'theHamsta/nvim-dap-virtual-text',
@@ -91,6 +84,7 @@ return {
         function()
           require('dap-python').test_method()
         end,
+        desc = '[D]ebug Python [T]est',
       },
     },
   },
