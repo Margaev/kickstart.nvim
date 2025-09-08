@@ -3,6 +3,9 @@
 --
 -- See the kickstart.nvim README for more information
 
+vim.o.listchars = 'trail:-,nbsp:+,tab:▏ '
+vim.o.list = true
+
 vim.api.nvim_create_user_command('Jq', function()
   vim.cmd "%!jq '.'"
 end, { desc = 'Format buffer as JSON using jq' })
