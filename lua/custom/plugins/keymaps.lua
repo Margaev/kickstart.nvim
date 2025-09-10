@@ -36,5 +36,10 @@ vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'diagnostic
 -- git
 vim.keymap.set('n', '<leader>gb', '<Cmd>G blame<CR>', { desc = '[g]it [b]lame' })
 vim.keymap.set('n', '<leader>gd', '<Cmd>Gdiffsplit<CR>', { desc = '[g]it [d]iff split' })
+vim.keymap.set('n', '<leader>gt', '<Cmd>G difftool<CR>', { desc = '[g]it diff [t]ool' })
+vim.keymap.set('n', '<leader>gr', function()
+  local current_buffer = vim.fn.expand '%'
+  vim.cmd(string.format('G checkout %s', current_buffer))
+end, { desc = '[g]it [r]eset current buffer' })
 
 return {}
