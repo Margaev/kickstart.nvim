@@ -24,11 +24,11 @@ vim.keymap.set('n', '<leader>tz', function()
   }
 end, { desc = '[T]oggle [Z]en Mode' })
 
+vim.keymap.set('n', '<leader>tm', '<Cmd>MarkdownPreview<CR>', { desc = 'Open MarkdownPreview' })
+
 -- navigation
 vim.keymap.set('n', '<C-d>', '<C-d>zz')
 vim.keymap.set('n', '<C-u>', '<C-u>zz')
-
-vim.keymap.set('n', '<leader>tm', '<Cmd>MarkdownPreview<CR>', { desc = 'Open MarkdownPreview' })
 
 -- diagnostics
 vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'diagnostics float' })
@@ -41,5 +41,9 @@ vim.keymap.set('n', '<leader>gr', function()
   local current_buffer = vim.fn.expand '%'
   vim.cmd(string.format('G checkout %s', current_buffer))
 end, { desc = '[g]it [r]eset current buffer' })
+
+vim.keymap.set('n', '<leader>N', function()
+  require('nvim-navbuddy').open()
+end, { desc = 'Open MarkdownPreview' })
 
 return {}

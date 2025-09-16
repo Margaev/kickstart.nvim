@@ -1,4 +1,28 @@
 return {
+  { 'rebelot/kanagawa.nvim' },
+  {
+    'catppuccin/nvim',
+    name = 'catppuccin',
+    -- priority = 1000
+  },
+  {
+    'AlexvZyl/nordic.nvim',
+    -- lazy = false,
+    -- priority = 1000,
+    config = function()
+      -- require('nordic').load()
+    end,
+  },
+  { 'ellisonleao/gruvbox.nvim', priority = 1000, config = true, opts = ... },
+  {
+    'sainnhe/gruvbox-material',
+    lazy = false,
+    priority = 1000,
+    config = function()
+      vim.cmd.colorscheme 'gruvbox-material'
+    end,
+    opts = ...,
+  },
   {
     'datsfilipe/vesper.nvim',
     config = function()
@@ -19,7 +43,7 @@ return {
   {
     'zenbones-theme/zenbones.nvim',
     dependencies = 'rktjmp/lush.nvim',
-    lazy = false,
+    -- lazy = false,
     -- priority = 1000,
   },
   { 'webhooked/kanso.nvim' },
@@ -27,19 +51,19 @@ return {
   { 'chriskempson/tomorrow-theme' },
   {
     'metalelf0/black-metal-theme-neovim',
-    lazy = false,
-    priority = 1000,
+    -- lazy = false,
+    -- priority = 1000,
     config = function()
       require('black-metal').setup {
         theme = 'gorgoroth',
       }
-      require('black-metal').load()
+      -- require('black-metal').load()
     end,
   },
   {
     'vague2k/vague.nvim',
-    lazy = false, -- make sure we load this during startup if it is your main colorscheme
-    priority = 1000, -- make sure to load this before all the other plugins
+    -- lazy = false, -- make sure we load this during startup if it is your main colorscheme
+    -- priority = 1000, -- make sure to load this before all the other plugins
     config = function()
       -- NOTE: you do not need to call setup if you don't want to.
       require('vague').setup {

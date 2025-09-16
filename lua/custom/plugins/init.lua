@@ -66,18 +66,6 @@ return {
       ]]
     end,
   },
-  { 'rebelot/kanagawa.nvim' },
-  { 'catppuccin/nvim', name = 'catppuccin', priority = 1000 },
-  {
-    'AlexvZyl/nordic.nvim',
-    lazy = false,
-    priority = 1000,
-    config = function()
-      -- require('nordic').load()
-    end,
-  },
-  { 'ellisonleao/gruvbox.nvim', priority = 1000, config = true, opts = ... },
-  { 'sainnhe/gruvbox-material', priority = 1000, config = true, opts = ... }, -- favorite
   {
     'nvim-lualine/lualine.nvim',
     config = function()
@@ -109,7 +97,6 @@ return {
       distance_stop_animating = 0.5, -- 0.1      > 0
     },
   },
-  { 'tpope/vim-fugitive' },
   {
     'rachartier/tiny-code-action.nvim',
     dependencies = {
@@ -128,7 +115,6 @@ return {
     opts = {},
   },
   { 'cohama/lexima.vim' },
-  { 'tpope/vim-fugitive' },
   {
     'cbochs/grapple.nvim',
     opts = {
@@ -146,5 +132,18 @@ return {
   {
     'folke/zen-mode.nvim',
     opts = {},
+  },
+  {
+    'neovim/nvim-lspconfig',
+    dependencies = {
+      {
+        'SmiteshP/nvim-navbuddy',
+        dependencies = {
+          'SmiteshP/nvim-navic',
+          'MunifTanjim/nui.nvim',
+        },
+        opts = { lsp = { auto_attach = true } },
+      },
+    },
   },
 }
