@@ -85,6 +85,7 @@ return {
           require('dap-python').test_method()
         end,
         desc = '[D]ebug Python [T]est',
+        ft = 'python',
       },
     },
   },
