@@ -105,4 +105,13 @@ return {
       'nvim-treesitter/nvim-treesitter',
     },
   },
+  {
+    'theHamsta/nvim-dap-virtual-text',
+    config = function()
+      require('nvim-dap-virtual-text').setup {
+        enabled = true,
+        virt_text_pos = 'eol',
+      }
+    end,
+  },
 }

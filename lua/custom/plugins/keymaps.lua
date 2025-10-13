@@ -19,7 +19,8 @@ end, { desc = '[T]oggle [D]AP UI' })
 vim.keymap.set('n', '<leader>tz', function()
   require('zen-mode').toggle {
     window = {
-      width = 1,
+      width = 0.9,
+      height = 0.9,
     },
   }
 end, { desc = '[T]oggle [Z]en Mode' })

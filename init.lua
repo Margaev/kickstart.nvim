@@ -430,6 +430,7 @@ require('lazy').setup({
         pickers = {
           find_files = {
             hidden = true,
+            -- no_ignore = true,
           },
           live_grep = {
             file_ignore_patterns = { 'node_modules', '.git', '.venv' },
