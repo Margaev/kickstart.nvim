@@ -42,6 +42,7 @@ vim.keymap.set('n', '<leader>gr', function()
   local current_buffer = vim.fn.expand '%'
   vim.cmd(string.format('G checkout %s', current_buffer))
 end, { desc = '[g]it [r]eset current buffer' })
+vim.keymap.set('n', '<leader>gv', '<Cmd>DiffviewOpen<CR>', { desc = '[g]it diff [v]iew' })
 
 vim.keymap.set('n', '<leader>N', function()
   require('nvim-navbuddy').open()
