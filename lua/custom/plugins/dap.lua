@@ -30,16 +30,6 @@ return {
       require('dapui').setup()
       require('dap-go').setup()
 
-      -- Handled by nvim-dap-go
-      -- dap.adapters.go = {
-      --   type = 'server',
-      --   port = '${port}',
-      --   executable = {
-      --     command = 'dlv',
-      --     args = { 'dap', '-l', '127.0.0.1:${port}' },
-      --   },
-      -- }
-
       vim.keymap.set('n', '<space>db', dap.toggle_breakpoint)
       vim.keymap.set('n', '<space>dgb', dap.run_to_cursor)
 
@@ -76,7 +66,7 @@ return {
     build = false,
     config = function()
       local dap_python = require 'dap-python'
-      dap_python.setup('~/.local/pipx/venvs/debugpy/bin/python', { include_configs = false })
+      dap_python.setup 'uv'
     end,
     keys = {
       {
