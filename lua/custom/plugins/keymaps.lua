@@ -43,7 +43,16 @@ vim.keymap.set('n', '<leader>gr', function()
   local current_buffer = vim.fn.expand '%'
   vim.cmd(string.format('G checkout %s', current_buffer))
 end, { desc = '[g]it [r]eset current buffer' })
-vim.keymap.set('n', '<leader>gv', '<Cmd>DiffviewOpen<CR>', { desc = '[g]it diff [v]iew' })
+vim.keymap.set('n', '<leader>gv', function()
+  local lib = require 'diffview.lib'
+  if lib.get_current_view() then
+    -- If a Diffview is open, close it
+    vim.cmd 'DiffviewClose'
+  else
+    -- Otherwise, open it
+    vim.cmd 'DiffviewOpen'
+  end
+end, { desc = '[g]it diff [v]iew toggle' })
 
 vim.keymap.set('n', '<leader>N', function()
   require('nvim-navbuddy').open()
