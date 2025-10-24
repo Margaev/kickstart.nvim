@@ -10,6 +10,7 @@ vim.keymap.set('n', '<leader>tn7', '<Cmd>7ToggleTerm<CR>', { desc = 'ToggleTerm 
 vim.keymap.set('n', '<leader>tn8', '<Cmd>8ToggleTerm<CR>', { desc = 'ToggleTerm 3' })
 vim.keymap.set('n', '<leader>tn9', '<Cmd>9ToggleTerm<CR>', { desc = 'ToggleTerm 3' })
 vim.keymap.set('n', '<leader>tn0', '<Cmd>0ToggleTerm<CR>', { desc = 'ToggleTerm 3' })
+
 vim.keymap.set('n', '<leader>tg', '<Cmd>9TermExec cmd="lazygit" direction="float"<CR>', { desc = '[T]oggleTerm [g]it' })
 
 vim.keymap.set('n', '<leader>td', function()
