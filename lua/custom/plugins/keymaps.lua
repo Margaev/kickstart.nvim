@@ -14,7 +14,7 @@ vim.keymap.set('n', '<leader>tn0', '<Cmd>0ToggleTerm<CR>', { desc = 'ToggleTerm 
 vim.keymap.set('n', '<leader>tg', '<Cmd>9TermExec cmd="lazygit" direction="float"<CR>', { desc = '[T]oggleTerm [g]it' })
 
 vim.keymap.set('n', '<leader>td', function()
-  require('dapui').toggle()
+  require('dapui').toggle { reset = true }
 end, { desc = '[T]oggle [D]AP UI' })
 
 vim.keymap.set('n', '<leader>tz', function()
