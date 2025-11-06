@@ -72,4 +72,5 @@ return {
       -- vim.cmd("colorscheme vague")
     end,
   },
+  { 'thedenisnikulin/vim-cyberpunk' },
 }
