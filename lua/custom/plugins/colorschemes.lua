@@ -19,7 +19,7 @@ return {
     lazy = false,
     priority = 1000,
     init = function()
-      vim.cmd.colorscheme 'gruvbox-material'
+      -- vim.cmd.colorscheme 'gruvbox-material'
     end,
     opts = ...,
   },
@@ -78,6 +78,12 @@ return {
       vim.opt.cursorline = false
       -- vim.g.cyberpunk_cursorline = 'black'
       -- vim.cmd.colorscheme 'cyberpunk'
+    end,
+  },
+  {
+    'EdenEast/nightfox.nvim',
+    init = function()
+      vim.cmd.colorscheme 'nightfox'
     end,
   },
 }
