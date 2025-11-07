@@ -18,9 +18,9 @@ return {
     'sainnhe/gruvbox-material',
     lazy = false,
     priority = 1000,
-    -- config = function()
-    --   vim.cmd.colorscheme 'gruvbox-material'
-    -- end,
+    init = function()
+      vim.cmd.colorscheme 'gruvbox-material'
+    end,
     opts = ...,
   },
   {
@@ -77,7 +77,7 @@ return {
     init = function()
       vim.opt.cursorline = false
       -- vim.g.cyberpunk_cursorline = 'black'
-      vim.cmd.colorscheme 'cyberpunk'
+      -- vim.cmd.colorscheme 'cyberpunk'
     end,
   },
 }
