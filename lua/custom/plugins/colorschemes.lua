@@ -1,5 +1,9 @@
+vim.cmd.colorscheme 'kanagawa'
+
 return {
-  { 'rebelot/kanagawa.nvim' },
+  {
+    'rebelot/kanagawa.nvim',
+  },
   {
     'catppuccin/nvim',
     name = 'catppuccin',
@@ -13,14 +17,16 @@ return {
       -- require('nordic').load()
     end,
   },
-  { 'ellisonleao/gruvbox.nvim', priority = 1000, config = true, opts = ... },
+  {
+    'ellisonleao/gruvbox.nvim',
+    -- priority = 1000,
+    config = true,
+    opts = ...,
+  },
   {
     'sainnhe/gruvbox-material',
     lazy = false,
     priority = 1000,
-    init = function()
-      -- vim.cmd.colorscheme 'gruvbox-material'
-    end,
     opts = ...,
   },
   {
@@ -69,7 +75,6 @@ return {
       require('vague').setup {
         -- optional configuration here
       }
-      -- vim.cmd("colorscheme vague")
     end,
   },
   {
@@ -77,13 +82,9 @@ return {
     init = function()
       vim.opt.cursorline = false
       -- vim.g.cyberpunk_cursorline = 'black'
-      -- vim.cmd.colorscheme 'cyberpunk'
     end,
   },
   {
     'EdenEast/nightfox.nvim',
-    init = function()
-      vim.cmd.colorscheme 'nightfox'
-    end,
   },
 }
