@@ -173,7 +173,7 @@ return {
     opts = {},
     keys = {
       {
-        's',
+        'zk',
         mode = { 'n', 'x', 'o' },
         function()
           require('flash').jump()
@@ -181,7 +181,7 @@ return {
         desc = 'Flash',
       },
       {
-        'S',
+        'Zk',
         mode = { 'n', 'x', 'o' },
         function()
           require('flash').treesitter()
@@ -261,6 +261,14 @@ return {
           },
         },
       }
+    end,
+  },
+  {
+    'Wansmer/treesj',
+    dependencies = { 'nvim-treesitter/nvim-treesitter' },
+    config = function()
+      require('treesj').setup {}
+      vim.keymap.set('n', '<leader>tj', '<Cmd>TSJToggle<CR>')
     end,
   },
 }

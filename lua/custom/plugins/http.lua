@@ -1,4 +1,4 @@
-vim.keymap.set('n', '<leader>rr', '<Cmd>Rest run<CR>', { desc = '[T]oggle[T]erm' })
+vim.keymap.set('n', '<leader>rr', '<Cmd>Rest run<CR>', { desc = '[R]est [r]un' })
 
 return {
   {
