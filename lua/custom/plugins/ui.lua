@@ -1,3 +1,5 @@
+vim.keymap.set('n', '<leader>tu', '<Cmd>UndotreeToggle<CR>', { desc = '[T]oggle [U]ndotree' })
+
 return {
   {
     'rcarriga/nvim-notify',
@@ -23,5 +25,8 @@ return {
       'MunifTanjim/nui.nvim',
       'rcarriga/nvim-notify',
     },
+  },
+  {
+    'mbbill/undotree',
   },
 }
