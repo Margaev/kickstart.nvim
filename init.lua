@@ -415,12 +415,7 @@ require('lazy').setup({
         -- You can put your default mappings / updates / etc. in here
         --  All the info you're looking for is in `:help telescope.setup()`
         --
-        -- defaults = {
-        --   mappings = {
-        --     i = { ['<c-enter>'] = 'to_fuzzy_refine' },
-        --   },
-        -- },
-        -- pickers = {}
+        defaults = {},
         extensions = {
           ['ui-select'] = {
             require('telescope.themes').get_dropdown(),
@@ -429,7 +424,8 @@ require('lazy').setup({
         -- file_ignore_patterns = { '.git/.*', '.venv/.*', 'venv/.*' },
         pickers = {
           find_files = {
-            hidden = true,
+            -- hidden = true,
+            find_command = { 'rg', '--files', '--hidden', '-g', '!.git' },
             -- no_ignore = true,
           },
           live_grep = {
