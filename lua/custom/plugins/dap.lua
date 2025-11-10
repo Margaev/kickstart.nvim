@@ -44,7 +44,7 @@ return {
       vim.keymap.set('n', '<leader>dh', dap.step_out, { desc = 'step out' })
       vim.keymap.set('n', '<leader>du', dap.run_to_cursor, { desc = 'run to cursor' })
       -- vim.keymap.set('n', '<leader>dsb', dap.step_back, { desc = 'step back' })
-      vim.keymap.set('n', '<leader>dt', dap.terminate, { desc = 'terminate' })
+      vim.keymap.set('n', '<leader>de', dap.terminate, { desc = 'terminate' })
       vim.keymap.set('n', '<leader>dr', dap.restart, { desc = 'restart' })
 
       dap.listeners.before.attach.dapui_config = function()
