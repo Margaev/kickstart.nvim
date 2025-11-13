@@ -1,4 +1,4 @@
-vim.keymap.set('n', '<leader>tu', '<Cmd>UndotreeToggle<CR>', { desc = '[T]oggle [U]ndotree' })
+vim.keymap.set('n', '<leader>tu', '<Cmd>UndotreeToggle<CR><Cmd>UndotreeFocus<CR>', { desc = '[T]oggle [U]ndotree' })
 
 return {
   {
