@@ -51,6 +51,8 @@ vim.api.nvim_create_autocmd('InsertLeave', {
   end,
 })
 
+require('guess-indent').setup {}
+
 return {
   {
     'akinsho/toggleterm.nvim',
